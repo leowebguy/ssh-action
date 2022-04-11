@@ -2,7 +2,7 @@
 
 set -eu
 
-printf '\033[33m Warning: This action does not currently support host verification; verification is disabled. \n \033[0m\n'
+# printf '\033[33m Warning: This action does not currently support host verification; verification is disabled. \n \033[0m\n'
 
 SSHPATH="$HOME/.ssh"
 
@@ -17,6 +17,7 @@ then
 fi
 
 echo "$INPUT_KEY" > "$SSHPATH/deploy_key"
+
 if [ "$INPUT_KEYFILE" = "" ]
 then
   KEYFILE="$SSHPATH/deploy_key"
