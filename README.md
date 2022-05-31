@@ -1,6 +1,6 @@
 # Remote SSH Commands
 
-![](https://github.com/fifsky/ssh-action/workflows/test/badge.svg)
+![](https://github.com/leowebguy/ssh-action/workflows/test/badge.svg)
 
 Simple GitHub Action to run a command on a remote server using SSH. This is working with the latest [GitHub Actions](https://github.com/features/actions).
 
@@ -12,7 +12,7 @@ Simple GitHub Action to run a command on a remote server using SSH. This is work
 
 ```yml
 - name: ls -a via ssh
-  uses: fifsky/ssh-action@master
+  uses: leowebguy/ssh-action@master
   with:
     command: |
       cd /tmp
@@ -49,7 +49,7 @@ Check out [the workflow example](.github/workflows/test.yml) for a minimalistic 
 
 If you need to add some extra SSH parameters, you can setting the args option.
 
-For example, add `-tt` parameter to solve: https://github.com/fifsky/ssh-action/issues/4
+For example, add `-tt` parameter to solve: https://github.com/leowebguy/ssh-action/issues/4
 
 ```
 Pseudo-terminal will not be allocated because stdin is not a terminal.
