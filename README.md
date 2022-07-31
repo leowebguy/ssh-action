@@ -14,7 +14,7 @@ on:
       - main
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
     steps:
       - uses: leowebguy/ssh-action@master
         with:
