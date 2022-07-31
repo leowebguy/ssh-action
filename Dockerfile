@@ -5,7 +5,7 @@ RUN apk update && \
   sshpass \
   bash
 
-COPY LICENSE README.md /
+# COPY LICENSE README.md /
 
 COPY entrypoint.sh /entrypoint.sh
 
