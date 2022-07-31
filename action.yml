@@ -10,10 +10,10 @@ inputs:
   user:
     description: "Username for authentication."
     required: false
-#  port:
-#    description: "Port number of the server."
-#    required: false
-#    default: "22"
+  port:
+    description: "Port number of the server."
+    required: false
+    default: "22"
   key:
     description: "Private key for either key-based or hostbased user authentication (OpenSSH format)."
     required: false

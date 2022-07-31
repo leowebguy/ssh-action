@@ -26,7 +26,7 @@ Simple GitHub Action to run a command on a remote server using SSH.
 
 - **host** - _string_ - Hostname or IP address of the server.
 
-- **port** - _integer_ - Port number of the server.
+- **port** - _integer_ - Port number of the server. `default 22`
 
 - **user** - _string_ - Username for authentication.
 
