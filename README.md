@@ -7,20 +7,34 @@ Simple GitHub Action to run a command on a remote server using SSH.
 **Example using OpenSSH private key**
 
 ```yml
-- name: ls -a via ssh
-  uses: leowebguy/ssh-action@master
-  with:
-    command: |
-      cd /tmp
-      ls -a
-    host: ${{ secrets.HOST }}
-    user: root
-    key: ${{ secrets.PRIVATE_KEY}}
+name: main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: leowebguy/ssh-action@master
+        with:
+          command: |
+            cd ~/public_html/cbr
+            git pull
+            composer update --ignore-platform-reqs  --no-interaction
+            npm i --silent
+            npm run prod
+          host: ${{ secrets.SERVER_IP }}
+          port: 22
+          user: root
+          key: ${{ secrets.SERVER_KEY }}
+          args: -tt
+
 ```
 
 🔐 Set your secrets here: `https://github.com/USERNAME/REPO/settings/secrets`.
 
-## Options
+## ✨ Options
 
 - **command** - _string_ - Command to execute on the remote server.
 
@@ -38,7 +52,7 @@ Simple GitHub Action to run a command on a remote server using SSH.
 Pseudo-terminal will not be allocated because stdin is not a terminal.
 ```
 
-## Tips
+## ✨ Tips
 
 If emitting "mesg: ttyname failed: Inappropriate ioctl for device", You need to modify your Linux files as follows
 
