@@ -2,8 +2,8 @@
 
 set -eu
 
-export TERM=xterm-256color
-export FORCE_COLOR=1
+# export TERM=xterm-256color
+# export FORCE_COLOR=1
 
 SSHPATH="$HOME/.ssh"
 
