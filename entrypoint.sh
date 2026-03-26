@@ -2,7 +2,8 @@
 
 set -eu
 
-# printf '\033[33m Warning: This action does not currently support host verification; verification is disabled. \n \033[0m\n'
+export TERM=xterm-256color
+export FORCE_COLOR=1
 
 SSHPATH="$HOME/.ssh"
 
